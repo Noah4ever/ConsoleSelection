@@ -170,19 +170,48 @@ public:
 		backgroundColor = "none";
 		selectedBackgroundColor = "none";
 	}
-
+	Selection(std::vector<SelectionOption> options, std::string selectedOptionPrefix, std::string selectedOptionSuffix, std::string textColor, std::string selectedTextColor, std::string backgroundColor, std::string selectedBackgroundColor) {
+		this->options = options;
+		this->selectedOptionPrefix = selectedOptionPrefix;
+		this->selectedOptionSuffix = selectedOptionSuffix;
+		this->textColor = textColor;
+		this->selectedTextColor = selectedTextColor;
+		this->backgroundColor = backgroundColor;
+		this->selectedBackgroundColor = selectedBackgroundColor;		
+	}
+	
+	/// <summary>
+	/// Set default text color (black, red, green, yellow, blue, magenta, cyan, white, reset|default|none|normal).
+	/// </summary>
+	/// <param name="String color"></param>
 	void setTextColor(std::string color) {
 		textColor = color;
 	}
+	/// <summary>
+	/// Set selected text color (black, red, green, yellow, blue, magenta, cyan, white, reset|default|none|normal).
+	/// </summary>
+	/// <param name="String color"></param>
 	void setSelectedTextColor(std::string color) {
 		selectedTextColor = color;
 	}
+	/// <summary>
+	/// Set default background color (black, red, green, yellow, blue, magenta, cyan, white, reset|default|none|normal).
+	/// </summary>
+	/// <param name="String color"></param>
 	void setBackgroundColor(std::string color) {
 		backgroundColor = color;
 	}
+	/// <summary>
+	/// Set selected background color (black, red, green, yellow, blue, magenta, cyan, white, reset|default|none|normal).
+	/// </summary>
+	/// <param name="String color"></param>
 	void setSelectedBackgroundColor(std::string color) {
 		selectedBackgroundColor = color;
 	}
+	/// <summary>
+	/// Set all colors (black, red, green, yellow, blue, magenta, cyan, white, reset|default|none|normal).
+	/// </summary>
+	/// <param name="String color"></param>
 	void setColors(std::string textColor, std::string selectedTextColor, std::string backgroundColor, std::string selectedBackgroundColor) {
 		this->textColor = textColor;
 		this->selectedTextColor = selectedTextColor;
@@ -190,15 +219,31 @@ public:
 		this->selectedBackgroundColor = selectedBackgroundColor;
 	}
 
+	/// <summary>
+	/// Set options.
+	/// </summary>
+	/// <param name="vector<SelectionOption> options"></param>
 	void setOptions(std::vector<SelectionOption> options) {
 		this->options = options;
 	}
+	/// <summary>
+	/// Add one option to options vector.
+	/// </summary>
+	/// <param name="SelectionOption option"></param>
 	void addOption(SelectionOption option) {
 		options.push_back(option);
 	}
+	/// <summary>
+	/// Remove option with int index.
+	/// </summary>
+	/// <param name="Int index"></param>
 	void removeOption(int index) {
 		options.erase(options.begin() + index);
 	}
+	/// <summary>
+	/// Remove option with string text.
+	/// </summary>
+	/// <param name="String text"></param>
 	void removeOption(std::string text) {
 		for (int i = 0; i < options.size(); i++) {
 			if (options[i].getText() == text) {
@@ -207,21 +252,41 @@ public:
 			}
 		}
 	}
+	/// <summary>
+	/// Returns options as vector.
+	/// </summary>
+	/// <returns>Vector options</returns>	
 	std::vector<SelectionOption> getOptions() {
 		return options;
 	}
 
+	/// <summary>
+	/// Set prefix and suffix of selected option.
+	/// </summary>
+	/// <param name="String prefix
+	/// String suffix"></param>
 	void setPrefixSuffix(std::string prefix, std::string suffix) {
 		selectedOptionPrefix = prefix;
 		selectedOptionSuffix = suffix;
 	}
+	/// <summary>
+	/// Set prefix of selected option.
+	/// </summary>
+	/// <param name="String prefix"></param
 	void setSelectedPrefix(std::string selectedOptionPrefix) {
 		this->selectedOptionPrefix = selectedOptionPrefix;
 	}
+	/// <summary>
+	/// Set suffix of selected option.
+	/// </summary>
+	/// <param name="String suffix"></param
 	void setSelectedSuffix(std::string selectedOptionSuffix) {
 		this->selectedOptionSuffix = selectedOptionSuffix;
 	}
 
+	/// <summary>
+	/// Start selection.
+	/// </summary>
 	int Start() {
 		int selected = 0; // Selected option
 		char userInput = '\0'; // User input

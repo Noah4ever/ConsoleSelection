@@ -1,5 +1,7 @@
 # ConsoleSelection
 
+https://user-images.githubusercontent.com/66632359/177047134-c1590308-522c-4bcc-ac76-29ac69d07f4c.mp4
+
 ## How to use:
 1. include header file: 
 ```
@@ -44,5 +46,8 @@ int index = selection.Start();
 - To move selection up press: 'w' or 'up arrow key'
 - To confirm selection press: 'enter' or 'spacebar'
 
-https://user-images.githubusercontent.com/66632359/177047134-c1590308-522c-4bcc-ac76-29ac69d07f4c.mp4
+## Code
+1. Some methods:
+![image](https://user-images.githubusercontent.com/66632359/177047622-705960b3-b85d-4d58-9f3a-ec3d7997c25c.png)
+
 

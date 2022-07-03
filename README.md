@@ -5,7 +5,7 @@
 ```
 include "Selection.h"
 ```
-2. Create vectpr and add options:
+2. Create vector and add options:
 ```
 std::vector<SelectionOption> options;
 options.push_back(SelectionOption("Option 1"));

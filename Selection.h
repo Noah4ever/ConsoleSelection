@@ -215,10 +215,10 @@ public:
 		selectedOptionPrefix = prefix;
 		selectedOptionSuffix = suffix;
 	}
-	void setselectedOptionPrefix(std::string selectedOptionPrefix) {
+	void setSelectedPrefix(std::string selectedOptionPrefix) {
 		this->selectedOptionPrefix = selectedOptionPrefix;
 	}
-	void setselectedOptionSuffix(std::string selectedOptionSuffix) {
+	void setSelectedSuffix(std::string selectedOptionSuffix) {
 		this->selectedOptionSuffix = selectedOptionSuffix;
 	}
 

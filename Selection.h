@@ -237,7 +237,7 @@ public:
 				userInput = _getch(); // Get pressed key
 				hasToPrint = false;
 
-				if (userInput == 13) { // If user pressed enter
+				if (userInput == 13 || userInput ==  32) { // If user pressed enter or spacebar
 					hasToPrint = true;
 					return selected;
 				}
@@ -263,7 +263,7 @@ public:
 				}
 
 			}
-		} while (userInput != 13);
+		} while (userInput != 13 && userInput != 32); // If user pressed enter or spacebar
 
 	}
 };
